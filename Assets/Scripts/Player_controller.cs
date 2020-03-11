@@ -12,6 +12,8 @@ public class Player_controller : MonoBehaviour
 
     public float flapVelocity;
     public float relativeVelocityX;
+
+    //public float angleVelocity;
     float angle;
 
     void Awake()
@@ -27,7 +29,6 @@ public class Player_controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ApplyAngle();
         Move();
 
         if(Input.GetButtonDown("Fire1") && JumpCount < 2 )
@@ -42,6 +43,10 @@ public class Player_controller : MonoBehaviour
     {
         rb2d.velocity = new Vector2(0, 0);
         rb2d.velocity = new Vector2(0.0f,flapVelocity);
+
+        //rb2d.angularVelocity =new Vector2(0,angleVelocity);
+        transform.rotation = Quaternion.Euler(0, 0,5);
+
 
          GetGroundTrigger.Ground = false;
 
@@ -59,7 +64,5 @@ public class Player_controller : MonoBehaviour
            this.transform.Translate(0.05f,0f,0f);
     }
 
-    void ApplyAngle()
-    {
-    }
+    
 }
