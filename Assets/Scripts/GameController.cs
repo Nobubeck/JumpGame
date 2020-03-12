@@ -28,6 +28,8 @@ public class GameController : MonoBehaviour
             stateText.gameObject.SetActive(false);
             stateText.text = "";
         }
+
+        
     }
 
     void Ready()
