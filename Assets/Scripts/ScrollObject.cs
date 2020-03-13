@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ScrollObject : MonoBehaviour
 {
-    public GameObject skys;
+    //public GameObject skys;
 
      // transformを取得
        
@@ -23,7 +23,7 @@ public class ScrollObject : MonoBehaviour
     {
         
         
-            skys.transform.Translate (0.05f, 0, 0);
+            //skys.transform.Translate (0.05f, 0, 0);
     
     }
 }
