@@ -68,7 +68,7 @@ public class Player_controller : MonoBehaviour
 
     public void Move()
     {
-           this.transform.Translate(0.07f,0f,0f);
+           this.transform.Translate(0.15f,0f,0f);
     }
 
     
