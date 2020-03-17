@@ -2,28 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScrollObject : MonoBehaviour
+public class DestroyObject : MonoBehaviour
 {
-    //public GameObject skys;
-
-     // transformを取得
-       
-    public GameObject player;
-
-    
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
-
     // Update is called once per frame
     void Update()
     {
         
-        
-            //skys.transform.Translate (0.05f, 0, 0);
-    
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Destroy(other.gameObject);
+        Debug.Log("enter");
     }
 }

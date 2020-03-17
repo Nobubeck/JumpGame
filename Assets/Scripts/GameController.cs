@@ -8,6 +8,8 @@ public class GameController : MonoBehaviour
     public GameObject player;
     public Text stateText;
 
+    public Text scoreText;
+
 
 
     // Start is called before the first frame update
@@ -28,14 +30,21 @@ public class GameController : MonoBehaviour
             stateText.gameObject.SetActive(false);
             stateText.text = "";
         }
+
+        scoreText.text = "Score :  " + (int)player.transform.position.x + "m";
+
+      
+
+        
     }
 
     void Ready()
     {
-        
+        scoreText.text = "Score : " + 0;
         stateText.gameObject.SetActive(true);
         stateText.text = "Ready";
     }
+
 
     
 }
