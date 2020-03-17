@@ -37,7 +37,7 @@ public void BlockGenerate()
 
     GameObject stage = Instantiate(
         StagePrefab,
-        new Vector3(40.0f + player.transform.position.x + rnd.Next(15),-5.0f + rnd.Next(3),0.0f),
+        new Vector3(40.0f + player.transform.position.x + rnd.Next(22),-6.0f + rnd.Next(3),0.0f),
         Quaternion.identity
     );
 }

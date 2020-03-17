@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DestroyObject : MonoBehaviour
 {
+
+    public GameObject StagePrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,10 +17,8 @@ public class DestroyObject : MonoBehaviour
     {
         
     }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        Destroy(other.gameObject);
-        Debug.Log("enter");
+      void OnBecameInvisible (){
+        GameObject.Destroy(StagePrefab.gameObject);
     }
+
 }
