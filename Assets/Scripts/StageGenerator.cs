@@ -6,6 +6,8 @@ using UnityEngine;
 public class StageGenerator : MonoBehaviour
 {
 
+
+
     public GameObject player;
     public GameObject StagePrefab;
     public int generateCount = 0;
@@ -33,11 +35,9 @@ public void BlockGenerate()
      System.Random rnd = new System.Random();
 
 
-     
-
     GameObject stage = Instantiate(
         StagePrefab,
-        new Vector3(40.0f + player.transform.position.x + rnd.Next(22),-6.0f + rnd.Next(3),0.0f),
+        new Vector3(40.0f + player.transform.position.x +  rnd.Next(5,22),-6.0f + rnd.Next(0,2),0.0f),
         Quaternion.identity
     );
 }
