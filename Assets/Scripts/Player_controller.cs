@@ -76,9 +76,15 @@ public class Player_controller : MonoBehaviour
 
             this.transform.Translate((8.0f+(1.5f * upSpeed) )* Time.deltaTime,0f,0f);
         }else{
-            upSpeed += 1.0f;
+            upSpeed += 1.2f;
         }
            
+    }
+
+    void OnCollisionEnter2D(Collision2D collision){
+        if(collision.gameObject.tag == "OutGameOver"){
+            Debug.Log("Game Over");
+        }
     }
     
 }
