@@ -13,8 +13,12 @@ public class Player_controller : MonoBehaviour
     public float flapVelocity;
     public float relativeVelocityX;
 
+    
+    
+
     //public float angleVelocity;
     float angle;
+     public float upSpeed = 1.0f;
 
     void Awake()
     {
@@ -23,7 +27,7 @@ public class Player_controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -68,8 +72,19 @@ public class Player_controller : MonoBehaviour
 
     public void Move()
     {
-           this.transform.Translate(0.15f,0f,0f);
+    if(player.transform.position.x < 300 * upSpeed){
+
+            this.transform.Translate((8.0f+(1.5f * upSpeed) )* Time.deltaTime,0f,0f);
+        }else{
+            upSpeed += 1.2f;
+        }
+           
     }
 
+    void OnCollisionEnter2D(Collision2D collision){
+        if(collision.gameObject.tag == "OutGameOver"){
+            Debug.Log("Game Over");
+        }
+    }
     
 }
